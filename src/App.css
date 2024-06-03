@@ -1,0 +1,204 @@
+/*NORMALIZE CSS*/
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    writing-mode: vertical-rl;
+}
+ul, li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+a {
+    display: block;
+    text-decoration: none;
+}
+input {
+    outline: none;
+    border: none;
+    background-color: inherit;
+}
+button {
+    background: none;
+    cursor: pointer;
+    border: none;
+}
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    background-color: #111;
+}
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 45px;
+
+    height: 100vh;
+}
+
+.card-wrapper {}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: min-content;
+
+    background-color: #fff;
+    border-radius: 25px 25px 0 0;
+
+    cursor: default;
+
+    transition: all .5s ease;
+}
+.card-wrapper:hover .card {
+    transform: translateY(-50px);
+}
+.card__img-wrapper {
+    margin: -31px 0px;
+}
+.card__img {
+    transition: transform .5s ease;
+}
+
+.card__info {
+    padding: 15px 10px 10px;
+
+    background-color: #47880e;
+    border: 2px solid #111;
+    border-radius: 25px 25px 0 0;
+}
+.card__title {
+    margin-bottom: 15px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    text-shadow: var(--text-shadow);
+}
+.card__wrapper {
+}
+.card__item {
+    margin-bottom: 20px;
+}
+.card__item:not(:last-child) {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.card__details {
+    font-size: 20px;
+    text-transform: uppercase;
+    text-shadow: var(--text-shadow);
+}
+.size {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.size__item {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 83px;
+    height: 30px;
+    
+    color: #fff;
+    border: 1px solid #fff;
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition: all .5s ease;
+}
+.size__item::before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    display: block;
+    width: 0;
+    height: 100%;
+
+    background-color: #fff;
+
+    transition: all .5s ease;
+}
+.size__item:hover::before {
+    width: 100%;
+}
+.size__item:hover {
+    color: #47880e;
+}
+.card__value {
+    font-size: 20px;
+    font-weight: 700;
+}
+.card__desc {
+    margin-top: 10px;
+}
+.card__btn {
+    position: relative;
+    z-index: 1;
+
+    padding: 8px;
+
+    width: 100%;
+
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+
+    border: 2px solid #fff;
+    text-shadow: var(--text-shadow);
+
+    transition: all .5s ease;
+}
+.card__btn::before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    display: block;
+    width: 0;
+    height: 100%;
+
+    background-color: #fff;
+
+    transition: all .5s ease;
+}
+.card__btn:hover::before {
+    width: 100%;
+}
+.card__btn:hover {
+    color: #47880e;
+    text-shadow: none;
+}
